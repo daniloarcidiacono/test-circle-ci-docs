@@ -1,0 +1,56 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/test-circle-ci-docs # directory where steps will run
+    docker:
+    - image: daniloarcidiacono/ci-java-node
+
+    steps:
+      - checkout
+
+      # restore the saved cache after the first run or if `package.json` has changed
+      - restore_cache:
+          key: test-circle-ci-{{ checksum "package.json" }}
+
+      # gets the project dependencies
+      - run: npm install
+
+      # saves the project dependencies
+      - save_cache:
+          paths:
+            - node_modules
+          key: test-circle-ci-{{ checksum "package.json" }}
+
+      # Build
+      - run:
+          name: Build docs
+          command: |
+            ./scripts/build.sh
+
+      # Deploy
+      - deploy:
+          name: Push compiled sources to main repo
+          command: |
+            git config --global user.name $USERNAME
+            git config --global user.password $PASSWORD
+            git config --global user.email $EMAIL
+            git clone --single-branch -b gh-pages https://github.com/daniloarcidiacono/test-circle-ci.git ~/test-circle-ci
+            cd ~/test-circle-ci
+            cp -r ~/test-circle-ci-docs/build/site/* .
+            git add .
+            git commit -am "chore: build"
+            git push origin gh-pages
+
+    # store the built site as an artifact
+      - store_artifacts:
+          path: build/site
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
+
