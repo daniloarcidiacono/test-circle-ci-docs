@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/test-circle-ci-docs # directory where steps will run
     docker:
-    - image: daniloarcidiacono/ci-java-node
+      - image: daniloarcidiacono/ci-java-node:0.1.2
 
     steps:
       - checkout
