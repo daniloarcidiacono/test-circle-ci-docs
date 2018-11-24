@@ -1,0 +1,23 @@
+{
+  "name": "test-circle-ci-docs",
+  "version": "0.0.1",
+  "description": "Documentation for test-circle-ci (based on Antora)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniloarcidiacono/test-circle-ci-docs.git"
+  },
+  "author": "Danilo Arcidiacono",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daniloarcidiacono/test-circle-ci-docs/issues"
+  },
+  "homepage": "https://github.com/daniloarcidiacono/test-circle-ci-docs#readme",
+  "dependencies": {
+    "@antora/cli": "^1.1.1",
+    "@antora/site-generator-default": "^1.1.1"
+  }
+}

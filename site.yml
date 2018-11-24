@@ -1,0 +1,13 @@
+site:
+  title: Test Circle CI docs
+  url: https://daniloarcidiacono.github.io/test-circle-ci
+  start_page: main-component::index.adoc
+
+content:
+  sources:
+  - url: ./main-component
+
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
