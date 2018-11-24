@@ -5,7 +5,13 @@ site:
 
 content:
   sources:
-  - url: ./main-component
+  - url: .
+    start_path: main-component
+
+asciidoc:
+  attributes:
+    linkattrs: ''
+    toc: ~
 
 ui:
   bundle:

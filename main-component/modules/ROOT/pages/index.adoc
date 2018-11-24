@@ -1,2 +1,21 @@
-= Test Circle CI
-This is a test.
+= AsciiDoc is Writing Zen
+Doc Writer <doc.writer@example.com>
+
+_Zen_ in the *art* of writing `plain text` with
+http://aciidoc.org[AsciiDoc].
+
+[TIP]
+Use http://asciidoctor.org[Asciidoctor] for the best AsciiDoc
+experience.footnote:[Not to mention the best looking output!]
+Then icon:twitter[role=aqua] about it!
+
+== Sample Section
+
+[square]
+* item 1
+* item 2
+
+[source, ruby]
+----
+puts "Hello, World!"
+----
