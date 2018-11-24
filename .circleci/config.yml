@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/test-circle-ci-docs # directory where steps will run
     docker:
-      - image: daniloarcidiacono/ci-java-node:0.2.0
+      - image: daniloarcidiacono/ci-java-node:0.3.0
 
     steps:
       - checkout
@@ -26,6 +26,7 @@ jobs:
           name: Build docs
           command: |
             ./scripts/build.sh
+            (cd build && zip -q -r ../build.zip site/*)
 
       # Deploy
       - deploy:
@@ -43,7 +44,7 @@ jobs:
 
     # store the built site as an artifact
       - store_artifacts:
-          path: build/site
+          path: build.zip
 
 workflows:
   version: 2
