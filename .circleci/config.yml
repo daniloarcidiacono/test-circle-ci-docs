@@ -28,6 +28,11 @@ jobs:
             ./scripts/build.sh
             (cd build && zip -q -r ../build.zip site/*)
 
+      # Add the fingerprint to enable pushes to test-circle-ci
+      - add_ssh_keys:
+          fingerprints:
+            - "3a:ab:5d:88:3c:dd:f8:ca:d1:c2:e8:e4:8b:6a:08:0d"
+
       # Deploy
       - deploy:
           name: Push compiled sources to main repo

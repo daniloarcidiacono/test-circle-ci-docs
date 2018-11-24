@@ -19,3 +19,6 @@ Then icon:twitter[role=aqua] about it!
 ----
 puts "Hello, World!"
 ----
+
+== Another section
+This is another section!
