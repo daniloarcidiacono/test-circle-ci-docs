@@ -5,8 +5,8 @@ site:
 
 content:
   sources:
-  - url: .
-    start_path: main-component
+    - url: .
+      start_path: main-component
 
 asciidoc:
   attributes:
@@ -17,3 +17,9 @@ ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+
+output:
+  destinations:
+    - provider: fs
+      clean: true
+    - provider: archive

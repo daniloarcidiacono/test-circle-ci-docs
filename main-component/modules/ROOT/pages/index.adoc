@@ -1,24 +1,35 @@
-= AsciiDoc is Writing Zen
-Doc Writer <doc.writer@example.com>
+= Test Circle CI Manual
+Danilo Arcidiacono <danilo.arcidiacono@gmail.com>
+//:revnumber: {project-version}
+//ifndef::imagesdir[:imagesdir: images]
 
-_Zen_ in the *art* of writing `plain text` with
-http://aciidoc.org[AsciiDoc].
+This is a user manual for Test Circle CI.
 
-[TIP]
-Use http://asciidoctor.org[Asciidoctor] for the best AsciiDoc
-experience.footnote:[Not to mention the best looking output!]
-Then icon:twitter[role=aqua] about it!
+== Introduction
+This project introduces the `Operations` class, that provides the most advanced linear algebra algorithms:
 
-== Sample Section
+    * `Operations.sum(a, b)`: computes the algebraic sum of `a` and `b`.
+    * `Operations.sub(a, b)`: computes the difference of `a` and `b`.
+    * `Operations.mul(a, b)`: computes the algebraic product of `a` and `b`.
+    * `Operations.div(a, b)`: computes the division of `a` and `b`.
 
-[square]
-* item 1
-* item 2
+NOTE: This project is not very useful.
 
-[source, ruby]
+== Example use
+Extremely complex algorithms can be implemented with few lines of code:
+
+.An example showcasing the power of the `Operations` class
+[source,java,options=nowrap]
 ----
-puts "Hello, World!"
+package com.example.blas;
+import io.github.daniloarcidiacono.test.ci.Operations;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(Operations.sum(4, 4)); // OMG
+    }
+}
 ----
 
-== Another section
-This is another section!
+TIP: Don't use pointless projects: please consider the environment before downloading. +
+     Save on dependencies, save bandwidth.

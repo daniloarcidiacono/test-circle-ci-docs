@@ -1,3 +1,5 @@
 name: main-component
-title: Main Component
+title: Test Circle CI Manual
 version: '1.0'
+nav:
+  - modules/ROOT/nav.adoc

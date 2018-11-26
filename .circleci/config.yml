@@ -26,7 +26,6 @@ jobs:
           name: Build docs
           command: |
             ./scripts/build.sh
-            (cd build && zip -q -r ../build.zip site/*)
 
       # Add the fingerprint to enable pushes to test-circle-ci
       - add_ssh_keys:
@@ -49,7 +48,7 @@ jobs:
 
     # store the built site as an artifact
       - store_artifacts:
-          path: build.zip
+          path: build/site.zip
 
 workflows:
   version: 2

@@ -1,0 +1,14 @@
+= Sum
+
+.An example showcasing the power of the `Operations` class
+[source,java,options=nowrap]
+----
+package com.example.blas;
+import io.github.daniloarcidiacono.test.ci.Operations;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(Operations.sum(4, 4)); // OMG
+    }
+}
+----
