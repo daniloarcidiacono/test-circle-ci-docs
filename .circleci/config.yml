@@ -43,8 +43,9 @@ jobs:
             cd ~/test-circle-ci
             cp -r ~/test-circle-ci-docs/build/site/* .
             git add .
-            git commit -am "chore: build"
-            git push origin gh-pages
+            git commit -am "chore: build version $CIRCLE_TAG"
+            git tag -a docs-$CIRCLE_TAG -m "docs-$CIRCLE_TAG"
+            git push origin gh-pages --tags
 
       # store the built site as an artifact
       - store_artifacts:
