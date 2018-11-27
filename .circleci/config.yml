@@ -47,8 +47,8 @@ jobs:
             git push origin gh-pages
 
     # store the built site as an artifact
-      - store_artifacts:
-          path: build/site.zip
+    - store_artifacts:
+        path: build/site.zip
 
 workflows:
   version: 2
