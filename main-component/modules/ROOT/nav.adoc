@@ -1,3 +1,4 @@
 * Examples
 ** xref:examples/sum.adoc[Summation]
 ** xref:examples/product.adoc[Product]
+** xref:examples/division.adoc[Division]

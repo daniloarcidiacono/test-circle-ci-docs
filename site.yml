@@ -8,6 +8,7 @@ content:
     - url: .
       branches:
         - master
+        - HEAD
         - support/*
       start_path: main-component
 

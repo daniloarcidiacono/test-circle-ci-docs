@@ -1,0 +1,29 @@
+= Division
+
+.The complex divison
+[source,java,options=nowrap]
+----
+package com.example.blas;
+import io.github.daniloarcidiacono.test.ci.Operations;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(Operations.div(4, 4)); // 1
+    }
+}
+----
+
+CAUTION: Be careful! Divisons don't like zeroes.
+
+
+[source,java,options=nowrap]
+----
+package com.example.blas;
+import io.github.daniloarcidiacono.test.ci.Operations;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(Operations.div(4, 0)); // ZOMG!!!!
+    }
+}
+----
