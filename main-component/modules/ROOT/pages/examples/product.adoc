@@ -1,6 +1,6 @@
 = Product
 
-.An example showcasing the power of the `Operations` class
+.Product operation
 [source,java,options=nowrap]
 ----
 package com.example.blas;
@@ -8,7 +8,7 @@ import io.github.daniloarcidiacono.test.ci.Operations;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Operations.mul(4, 4)); // OMG
+        System.out.println(Operations.mul(4, 4)); // 16
     }
 }
 ----
