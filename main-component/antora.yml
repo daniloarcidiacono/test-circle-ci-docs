@@ -1,6 +1,6 @@
 name: main-component
 title: Test Circle CI Manual
-version: '0.1.0-RELEASE'
+version: '0.1.1-RELEASE'
 
 nav:
   - modules/ROOT/nav.adoc
