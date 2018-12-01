@@ -5,7 +5,10 @@ site:
 
 content:
   sources:
-    - url: .
+    # This excludes the git worktree from Antora's purview
+    # When CircleCI checks out a specific tag, leaves the HEAD in a detached state
+    # Without excluding the git worktree from Antora, the build fails due to duplicate files
+    - url: ./.git
       branches:
         - master
         - support/*
